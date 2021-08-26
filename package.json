@@ -1,0 +1,28 @@
+{
+  "name": "edushopify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deSantLollipop/eduShopify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deSantLollipop/eduShopify/issues"
+  },
+  "homepage": "https://github.com/deSantLollipop/eduShopify#readme",
+  "dependencies": {
+    "@shopify/themekit": "^1.1.9",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.38.1"
+  }
+}
