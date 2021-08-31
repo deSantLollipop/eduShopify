@@ -1,0 +1,51 @@
+<div class="test-section" style="color:{{ section.settings.test-color }}; text-align: {{ section.settings.test-align }};">
+    <h1>Speeedyyy test</h1>
+</div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+        {
+            "id": "test-color",
+            "type":"color",
+            "label":"Color",
+            "default": "#000"
+        },
+        {
+            "id": "test-align",
+            "type":"select",
+            "label":"Alignment",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Centered"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ],
+            "default": "left"
+        }
+    ],
+	"presets": [
+		{
+			"name": "Test Section",
+			"category": "Test Category"
+		}
+	]
+  }
+{% endschema %}
+
+
+{% stylesheet %}
+  .test-section h1{
+      color: {{ section.settings.test-color }}!important;
+      text-align: {{ section.settings.test-align }}!important;
+  }
+{% endstylesheet %}
