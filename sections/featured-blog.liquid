@@ -11,12 +11,14 @@
     <ul class="grid grid--uniform grid--blog">
       {% for article in blog.articles limit: section.settings.post_limit %}
         {% if section.settings.post_limit == 1 %}
-          <li class="grid__item medium-up--one-whole">
+          {% assign post_column_class = 'whole' %}
         {% elsif section.settings.post_limit == 2 %}
-          <li class="grid__item medium-up--one-half">
+          {% assign post_column_class = 'half' %}
         {% else %}
-          <li class="grid__item medium-up--one-third">
+          {% assign post_column_class = 'third' %}
         {% endif %}
+        <li class="grid__item medium-up--one-{{ post_column_class }}">
+
           <article aria-labelledby="FeaturedBlogTitle-{{ forloop.index0 }}-{{ section.id }}">
             <header>
               <a href="{{ article.url }}" class="article__link">
